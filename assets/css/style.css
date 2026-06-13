@@ -1,0 +1,203 @@
+/* ==========================================================================
+   NexusTech Custom Styles
+   ========================================================================== */
+
+:root {
+    --primary-color: #4F46E5;
+    --secondary-color: #0ea5e9;
+    --accent-color: #f43f5e;
+    --gradient-1: linear-gradient(135deg, #4F46E5 0%, #0ea5e9 100%);
+    --gradient-2: linear-gradient(135deg, #f43f5e 0%, #f97316 100%);
+    --gradient-light: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #334155;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Utilities */
+.text-gradient {
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bg-gradient {
+    background: var(--gradient-1) !important;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #1e1b4b 0%, #4F46E5 100%) !important;
+}
+
+.bg-gradient-light {
+    background: var(--gradient-light);
+}
+
+.bg-primary-soft { background-color: rgba(79, 70, 229, 0.1); }
+.bg-success-soft { background-color: rgba(16, 185, 129, 0.1); }
+.bg-warning-soft { background-color: rgba(245, 158, 11, 0.1); }
+
+.tracking-wide { letter-spacing: 2px; }
+.relative-z { position: relative; z-index: 10; }
+
+.hover-white:hover {
+    color: #fff !important;
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Buttons */
+.btn-gradient {
+    background: var(--gradient-1);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(135deg, #0ea5e9 0%, #4F46E5 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3) !important;
+}
+
+/* Glassmorphism */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+}
+
+/* Navbar */
+.transition-navbar {
+    transition: all 0.4s ease;
+    padding: 1.5rem 0;
+}
+
+.navbar-scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-scrolled .nav-link {
+    color: #334155 !important;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: #f8fafc;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.shape-1 {
+    width: 500px;
+    height: 500px;
+    background: var(--gradient-1);
+    top: -100px;
+    right: -100px;
+}
+
+.shape-2 {
+    width: 400px;
+    height: 400px;
+    background: var(--gradient-2);
+    bottom: -50px;
+    left: -100px;
+}
+
+.hero-image-wrapper {
+    z-index: 10;
+}
+
+.main-glass {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 2rem;
+    position: relative;
+}
+
+.floating-badge {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: float 6s ease-in-out infinite;
+}
+
+.badge-1 { top: -20px; left: -20px; animation-delay: 0s; }
+.badge-2 { bottom: 40px; right: -30px; animation-delay: 2s; }
+.badge-3 { bottom: -20px; left: 40px; animation-delay: 4s; }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Feature List */
+.icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+/* Services */
+.service-card {
+    transition: all 0.4s ease;
+    border: 1px solid transparent !important;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+    border-color: rgba(79, 70, 229, 0.2) !important;
+}
+
+.service-icon-wrapper {
+    display: inline-block;
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Forms */
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+    background-color: white;
+}
